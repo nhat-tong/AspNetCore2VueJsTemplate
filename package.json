@@ -1,0 +1,44 @@
+{
+  "name": "aspnetcore2vuejstemplate",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "es6-object-assign": "^1.1.0",
+    "es6-promise": "^4.2.4",
+    "event-source-polyfill": "^1.0.5",
+    "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.11.0",
+    "typescript": "^3.2.2",
+    "vue": "^2.5.21",
+    "vue-property-decorator": "^7.2.0",
+    "vue-router": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/webpack-env": "^1.13.6",
+    "aspnet-webpack": "^3.0.0",
+    "css-loader": "^2.1.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^3.0.1",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^5.3.2",
+    "uglifyjs-webpack-plugin": "^2.1.0",
+    "vue-loader": "^15.4.2",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-hot-middleware": "^2.24.3",
+    "webpack-dev-middleware": "^3.4.0"
+  },
+  "scripts": {
+    "clean:dist": "rimraf wwwroot/dist",
+    "clean:prod": "npm run clean:dist && rimraf node_modules && npm install",
+    "build:dev": "npm run clean:dist && node node_modules/webpack/bin/webpack.js --config webpack.config.js",
+    "build:prod": "node node_modules/webpack/bin/webpack.js --config webpack.config.js --env.prod"
+  }
+}
